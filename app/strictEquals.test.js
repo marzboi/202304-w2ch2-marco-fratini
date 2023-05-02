@@ -1,4 +1,4 @@
-import { strictEquals } from "./strictEquals.js";
+import strictEquals from "./strictEquals.js";
 
 describe("Given the strictEquals function", () => {
   describe("when it receives the values of 1 and 1", () => {
@@ -10,6 +10,15 @@ describe("Given the strictEquals function", () => {
       const expectedValue = true;
 
       expect(valueReturned).toBe(expectedValue);
+    });
+  });
+  describe("when it receives the values of NaN and NaN", () => {
+    test("then it should return the value of false", () => {
+      const valueA = NaN;
+      const valueB = NaN;
+
+      const valueReturned = strictEquals(valueA, valueB);
+      const expectedValue = false;
     });
   });
 });
