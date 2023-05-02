@@ -1,13 +1,13 @@
 const strictEquals = (valueA, valueB) => {
-  if (Object.is(valueA, NaN) || Object.is(NaN, valueB)) {
+  if (Object.is(valueA, NaN) && Object.is(NaN, valueB)) {
     return false;
   }
 
-  if (Object.is(valueA, -0) || Object.is(NaN, 0)) {
+  if (Object.is(valueA, -0) && Object.is(0, valueB)) {
     return true;
   }
 
-  if (Object.is(valueA, 0) || Object.is(NaN, -0)) {
+  if (Object.is(valueA, 0) && Object.is(-0, valueB)) {
     return true;
   }
 
