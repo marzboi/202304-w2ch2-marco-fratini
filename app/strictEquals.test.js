@@ -12,6 +12,7 @@ describe("Given the strictEquals function", () => {
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the values of NaN and NaN", () => {
     test("then it should return the value of false", () => {
       const valueA = NaN;
@@ -19,9 +20,11 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = false;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the values of 0 and -0", () => {
     test("then it should return the value of true", () => {
       const valueA = 0;
@@ -29,9 +32,11 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = true;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the values of -0 and 0", () => {
     test("then it should return the value of true", () => {
       const valueA = -0;
@@ -39,9 +44,11 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = true;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the value of 1 and '1'", () => {
     test("then it should return the value of false", () => {
       const valueA = 1;
@@ -49,9 +56,11 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = false;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the value of true and false", () => {
     test("then it should return the value of false", () => {
       const valueA = true;
@@ -59,9 +68,11 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = false;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the value of false and false", () => {
     test("then it should return the value of false", () => {
       const valueA = false;
@@ -69,9 +80,11 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = true;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });
+
   describe("when it receives the value of 'water' and 'oil'", () => {
     test("then it should return the value of false", () => {
       const valueA = "water";
@@ -79,6 +92,7 @@ describe("Given the strictEquals function", () => {
 
       const valueReturned = strictEquals(valueA, valueB);
       const expectedValue = false;
+
       expect(valueReturned).toBe(expectedValue);
     });
   });

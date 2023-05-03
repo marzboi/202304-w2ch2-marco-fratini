@@ -3,11 +3,10 @@ const strictEquals = (valueA, valueB) => {
     return false;
   }
 
-  if (Object.is(valueA, -0) && Object.is(0, valueB)) {
-    return true;
-  }
-
-  if (Object.is(valueA, 0) && Object.is(-0, valueB)) {
+  if (
+    (Object.is(valueA, -0) && Object.is(0, valueB)) ||
+    (Object.is(valueA, 0) && Object.is(-0, valueB))
+  ) {
     return true;
   }
 
